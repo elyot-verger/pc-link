@@ -27,12 +27,12 @@ Then follow the instructions according to your distribution:
 
 #### 🟠 Ubuntu / Debian / Linux Mint (.deb)
 ```bash
-sudo apt install ./pc-link-back_1.0.0_all.deb
+sudo apt install ./pc-link-back_1.0.1_all.deb
 ```
 
 #### 🔵 Fedora / RHEL / CentOS (.rpm)
 ```bash
-sudo dnf install ./pc-link-back-1.0.0-1.noarch.rpm
+sudo dnf install ./pc-link-back-1.0.1-1.noarch.rpm
 ```
 
 #### 🟣 Arch Linux / Manjaro / EndeavourOS (PKGBUILD)
