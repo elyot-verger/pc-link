@@ -2,7 +2,7 @@
 set -e
 
 PACKAGE_NAME="pc-link-back"
-VERSION="1.0.0"
+VERSION="1.0.1"
 RELEASE="1"
 
 echo "Building RPM package for $PACKAGE_NAME v$VERSION..."

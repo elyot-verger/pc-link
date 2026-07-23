@@ -100,7 +100,7 @@ def get_topology_info():
             pass
     return monitors
 
-@pc_status_bp.route('/status', methods=['GET'])
+@pc_status_bp.route('/pc_status', methods=['GET'])
 def get_pc_status():
     try:
         vol_res = subprocess.run(["wpctl", "get-volume", "@DEFAULT_AUDIO_SINK@"], capture_output=True, text=True, env=get_env())
