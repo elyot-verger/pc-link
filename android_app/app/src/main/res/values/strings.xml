@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">pc-link</string>
+    <string name="distant_commands">Distant Commands</string>
+    <string name="distant_commands_dashboard">Distant Commands Dashboard</string>
+    <string name="host_hint">SSH Host (e.g., 192.168.1.10)</string>
+    <string name="port_hint">Port (e.g., 22)</string>
+    <string name="username_hint">Username</string>
+    <string name="private_key_button">Select ed25519 Private Key File</string>
+    <string name="command_hint">Command %d</string>
+    <string name="save_button">Save Configuration</string>
+
+    <string-array name="icons_array">
+        <item>None</item>
+        <item>Lock</item>
+        <item>Unlock</item>
+        <item>Power</item>
+        <item>Play</item>
+    </string-array>
+</resources>

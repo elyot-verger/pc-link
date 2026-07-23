@@ -1,0 +1,38 @@
+pkgname=pc-link-back
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Python backend service for remotely controlling a PC from an Android app via Wi-Fi/Tailscale. Supports both X11 and Wayland."
+arch=('any')
+url="https://github.com/elyot/pc-link"
+license=('GPL3')
+depends=('python' 'python-flask' 'python-evdev' 'playerctl' 'upower' 'brightnessctl' 'ddcutil' 'networkmanager' 'bluez' 'xdotool' 'xorg-xset' 'xorg-xrandr')
+source=("local://..")
+
+package() {
+    # Install Python files
+    install -d "${pkgdir}/opt/${pkgname}"
+    cp "${srcdir}/"../*.py "${pkgdir}/opt/${pkgname}/"
+    cp "${srcdir}/"../requirements.txt "${pkgdir}/opt/${pkgname}/"
+    chmod -R 755 "${pkgdir}/opt/${pkgname}"
+
+    # Install udev rule
+    install -d "${pkgdir}/etc/udev/rules.d"
+    echo 'KERNEL=="uinput", MODE="0660", GROUP="input", OPTIONS+="static_node=uinput"' > "${pkgdir}/etc/udev/rules.d/99-pc-link-uinput.rules"
+
+    # Install Systemd user service
+    install -d "${pkgdir}/usr/lib/systemd/user"
+    cat << EOF > "${pkgdir}/usr/lib/systemd/user/pc-link-back.service"
+[Unit]
+Description=PC-Link Backend Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/pc-link-back/app.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
+EOF
+}

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/widgetRow1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/widgetBtn1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/widget_btn_bg">
+            <ImageView
+                android:id="@+id/widgetIcon1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="4dp"
+                android:visibility="gone"
+                android:src="@drawable/ic_lock" />
+            <TextView
+                android:id="@+id/widgetText1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cmd 1"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:shadowColor="#A0000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="3"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/widgetBtn2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/widget_btn_bg">
+            <ImageView
+                android:id="@+id/widgetIcon2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="4dp"
+                android:visibility="gone"
+                android:src="@drawable/ic_unlock" />
+            <TextView
+                android:id="@+id/widgetText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cmd 2"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:shadowColor="#A0000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="3"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/widgetRow2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/widgetBtn3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/widget_btn_bg">
+            <ImageView
+                android:id="@+id/widgetIcon3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="4dp"
+                android:visibility="gone"
+                android:src="@drawable/ic_power" />
+            <TextView
+                android:id="@+id/widgetText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cmd 3"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:shadowColor="#A0000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="3"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/widgetBtn4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/widget_btn_bg">
+            <ImageView
+                android:id="@+id/widgetIcon4"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="4dp"
+                android:visibility="gone"
+                android:src="@drawable/ic_play" />
+            <TextView
+                android:id="@+id/widgetText4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cmd 4"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:shadowColor="#A0000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="3"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

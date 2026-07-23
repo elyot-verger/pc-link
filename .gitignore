@@ -1,0 +1,40 @@
+# ========================================
+# Android
+# ========================================
+android_app/build/
+android_app/app/build/
+android_app/.gradle/
+android_app/.idea/
+android_app/local.properties
+android_app/captures/
+android_app/*.iml
+android_app/.cxx/
+
+# ========================================
+# Python (Backend)
+# ========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.log
+venv/
+.venv/
+env/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ========================================
+# Packaging & Build artifacts
+# ========================================
+# Les paquets .deb et .rpm ne sont plus ignorés pour pouvoir les push sur Git
+back/packaging/pkg/
+back/packaging/src/
+back/packaging/pc-link-back_*_all/
+
+# ========================================
+# OS / IDE
+# ========================================
+.DS_Store
+.vscode/
+*.swp
+*~
