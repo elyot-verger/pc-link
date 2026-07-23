@@ -22,11 +22,7 @@ The Server is designed to be easily installed on any major Linux distribution (D
 
 ### Method 1: Via Package Managers (.deb, .rpm, pacman) (Recommended)
 
-Go to the packaging folder:
-```bash
-cd back/packaging/
-```
-
+Download the package for your distribution from the [Releases](https://github.com/elyot-verger/pc-link/releases) page of this repository.
 Then follow the instructions according to your distribution:
 
 #### 🟠 Ubuntu / Debian / Linux Mint (.deb)

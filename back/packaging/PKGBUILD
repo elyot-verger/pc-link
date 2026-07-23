@@ -3,16 +3,19 @@ pkgver=1.0.0
 pkgrel=1
 pkgdesc="Python backend service for remotely controlling a PC from an Android app via Wi-Fi/Tailscale. Supports both X11 and Wayland."
 arch=('any')
-url="https://github.com/elyot/pc-link"
+url="https://github.com/elyot-verger/pc-link"
 license=('GPL3')
 depends=('python' 'python-flask' 'python-evdev' 'playerctl' 'upower' 'brightnessctl' 'ddcutil' 'networkmanager' 'bluez' 'xdotool' 'xorg-xset' 'xorg-xrandr')
-source=("local://..")
+source=("$pkgname-$pkgver.tar.gz::https://github.com/elyot-verger/pc-link/archive/refs/tags/v$pkgver.tar.gz")
+sha256sums=('SKIP')
 
 package() {
+    cd "${srcdir}/pc-link-${pkgver}/back"
+
     # Install Python files
     install -d "${pkgdir}/opt/${pkgname}"
-    cp "${srcdir}/"../*.py "${pkgdir}/opt/${pkgname}/"
-    cp "${srcdir}/"../requirements.txt "${pkgdir}/opt/${pkgname}/"
+    cp *.py "${pkgdir}/opt/${pkgname}/"
+    cp requirements.txt "${pkgdir}/opt/${pkgname}/"
     chmod -R 755 "${pkgdir}/opt/${pkgname}"
 
     # Install udev rule
